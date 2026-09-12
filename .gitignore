@@ -1,0 +1,7 @@
+data/raw/*
+data/cutadapt/*
+output/*
+!output/.gitkeep
+!data/raw/.gitkeep
+.Rhistory
+.RData
