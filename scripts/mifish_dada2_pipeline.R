@@ -3,7 +3,7 @@ library(ShortRead)
 library(Biostrings)
 library(ggplot2)
 
-path <- "rawData/"
+path <- "../data/raw/"
 list.files(path)
 
 fnFs <- sort(list.files(path, pattern = "_R1.fastq.gz", full.names = TRUE))
@@ -51,6 +51,7 @@ rbind(
 )
 ##############################################################################################################
 
+## USER CONFIGURATION: Change this to your local cutadapt installation path
 cutadapt <- "/home/admuser/miniconda3/envs/cutadapt/bin/cutadapt"
 system2(cutadapt, args = "--version")
 
