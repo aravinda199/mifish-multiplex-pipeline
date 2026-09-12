@@ -3,6 +3,9 @@ library(ShortRead)
 library(Biostrings)
 library(ggplot2)
 
+## USER CONFIGURATION: Change this to your local cutadapt installation path
+CUTADAPT_PATH <- "/home/admuser/miniconda3/envs/cutadapt/bin/cutadapt"
+
 path <- "../data/raw/"
 list.files(path)
 
@@ -51,8 +54,7 @@ rbind(
 )
 ##############################################################################################################
 
-## USER CONFIGURATION: Change this to your local cutadapt installation path
-cutadapt <- "/home/admuser/miniconda3/envs/cutadapt/bin/cutadapt"
+cutadapt <- CUTADAPT_PATH
 system2(cutadapt, args = "--version")
 
 path.cut <- file.path(path, "cutadapt")
